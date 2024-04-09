@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     // Get the section element by its ID
     var section = document.getElementById("map-image-container");
+    section.innerHTML = htmlContent;
+
    
   	imageMapResize();
 
