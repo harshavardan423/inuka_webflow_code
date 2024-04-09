@@ -1,4 +1,4 @@
-$(function () {
+   $(function () {
     $('#map-image').maphilight();
 
     // Variable to store default text
