@@ -1,4 +1,4 @@
-   $(function () {
+$(function () {
     $('#map-image').maphilight();
 
     // Variable to store default text
@@ -89,6 +89,17 @@ $('area[alt="singapore"][shape="circle"]').hover(
     }
 );
 
+
+// Hover event for Singapore (circle)
+$('area[alt="philippines"][shape="circle"]').hover(
+    function () {
+        handleHover(this);
+    },
+    function () {
+        handleHoverOut();
+    }
+);
+
 function handleHover(area) {
     var content = getContent(area);
     var highlightImage = $(area).data('highlight-image') || '';
@@ -166,8 +177,8 @@ function handleHoverOut() {
             '<p><span style="color: #efd181;">Role : </span>Senior Associate</p>' +
             '<p><span style="color: #efd181;">Company type : </span>Renewable Energy Fund</p>' + '<br>' +
             
-            '<p><span style="color: #efd181;">Role : </span>Senior Associate</p>' +
-            '<p><span style="color: #efd181;">Company type : </span>Renewable Energy Fund</p>';
+            '<p><span style="color: #efd181;">Role : </span>CEO</p>' +
+            '<p><span style="color: #efd181;">Company type : </span>Hydropower Developer</p>';
 
 
     case 'france':
@@ -189,7 +200,10 @@ function handleHoverOut() {
             '<p><span style="color: #efd181;">Company type : </span> Renewable Energy IPP </p>' + '<br>' +
             
             '<p style="color: white;"><span style="color: #efd181;">Role : </span>Project Finance Manager</p>' +
-            '<p><span style="color: #efd181;">Company type : </span> Renewable Energy Developer</p>';
+            '<p><span style="color: #efd181;">Company type : </span> Renewable Energy Developer</p>'+ '<br>' +
+            
+            '<p style="color: white;"><span style="color: #efd181;">Role : </span>ESG Manager</p>' +
+            '<p><span style="color: #efd181;">Company type : </span> Renewable Energy Fund</p>' ;
 
     case 'southafrica':
         return '<h2 style="color: #efd181; font-weight: 500">South Africa</h2>' +
@@ -293,6 +307,21 @@ function handleHoverOut() {
             '<p style="color: white;"><span style="color: #efd181;">Role : </span> Financial Account</p>' +
             '<p><span style="color: #efd181;">Company type : </span>Renewable Energy Fund</p>';
 
+
+    case 'philippines':
+        return '<h2 style="color: #efd181; font-weight: 500">Philippines</h2>' +
+            '<p style="color: white; font-weight: bold;">Recent Placements</p>' +
+            '<p style="color: white;"><span style="color: #efd181;">Role : </span> General Counsel</p>' +
+            '<p><span style="color: #efd181;">Company type : </span>Renewable Energy Developer</p>'  + '<br>' +
+
+            '<p style="color: white;"><span style="color: #efd181;">Role : </span>Vice President</p>' +
+            '<p><span style="color: #efd181;">Company type : </span>Infrastructure Fund</p>' ;
+
+    case 'malaysia':
+        return '<h2 style="color: #efd181; font-weight: 500">Malaysia</h2>' +
+            '<p style="color: white; font-weight: bold;">Recent Placements</p>' +
+            '<p style="color: white;"><span style="color: #efd181;">Role : </span> Head of Development</p>' +
+            '<p><span style="color: #efd181;">Company type : </span>Renewable Energy Developer</p>';
     // Add more cases for other areas if needed
 
     default:
